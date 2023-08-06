@@ -1,3 +1,5 @@
+data "aws_elb_service_account" "current" {}
+
 data "aws_vpc" "default" {
   default = true
 }

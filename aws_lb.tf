@@ -10,6 +10,12 @@ resource "aws_lb" "main" {
 
   subnets = data.aws_subnets.default.ids
 
+  access_logs {
+    enabled = true
+    bucket  = aws_s3_bucket.logs.bucket
+    prefix  = "access-log"
+  }
+
   tags = {
     "Name" = "${var.service}-${var.env}-main"
   }
