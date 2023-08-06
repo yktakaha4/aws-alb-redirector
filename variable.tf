@@ -15,5 +15,5 @@ variable "redirector_default_destination_domain_name" {
 }
 
 variable "redirector_subdomain_destination_domain_name" {
-  default = "google.com"
+  default = "example.net"
 }
